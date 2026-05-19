@@ -53,5 +53,7 @@
     <footer class="container">
       <%= yield :footer %>
     </footer>
+
+    <%= console if Rails.env.development? && params.has_key?(:console) %>
   </body>
 </html>

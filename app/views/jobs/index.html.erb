@@ -1,7 +1,11 @@
-<%= render @jobs %>
-<%# @jobs.each do |job| %>
-  <%#= render partial: "jobs/job", locals: {job: job} %>
-<%# end %>
+<%= turbo_stream_from :jobs %>
+
+<div id="jobs">
+  <%= render @jobs %>
+  <%# @jobs.each do |job| %>
+    <%#= render partial: "jobs/job", locals: {job: job} %>
+  <%# end %>
+</div>
 
 <% if @jobs.none? %>
   <article>Check back later for new jobs.</article>
