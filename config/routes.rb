@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount MissionControl::Jobs::Engine, at: "/jobs"
+
   resource :registration, only: [ :new, :create ]
   resource :session
   resources :passwords, param: :token
