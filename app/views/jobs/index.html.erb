@@ -6,3 +6,5 @@
 <% if @jobs.none? %>
   <article>Check back later for new jobs.</article>
 <% end %>
+
+<%= content_for :footer, render("subscribers/form") %>

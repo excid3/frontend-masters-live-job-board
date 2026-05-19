@@ -1,0 +1,11 @@
+<article>
+  <%= turbo_frame_tag :subscribe_form do %>
+    <h6>Get jobs delivered to your inbox</h6>
+    <%= form_with model: Subscriber.new do |form| %>
+      <fieldset role="group">
+        <%= form.email_field :email, placeholder: "you@example.com", requied: true %>
+        <%= form.submit "Subscribe" %>
+      </fieldset>
+    <% end %>
+  <% end %>
+</article>

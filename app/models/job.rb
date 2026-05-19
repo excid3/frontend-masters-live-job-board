@@ -20,4 +20,8 @@ class Job < ApplicationRecord
   def to_param
     [id, title, "at", company].join("-").parameterize
   end
+
+  def owner?
+    user_id? && user == Current.user
+  end
 end
