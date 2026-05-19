@@ -1,7 +1,9 @@
 New jobs this week
 
-<% params[:jobs].each do |job| %>
+<% @jobs.each do |job| %>
     <%= job.title %> at <%= job.company %>
     <%= number_to_currency job.salary %> - <%= job.region %>
     <%= job_url(job) %>
 <% end %>
+
+Unsubscribe: <%= unsubscribe_url(token: params[:subscriber].generate_token_for(:unsubscribe)) %>

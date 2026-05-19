@@ -5,6 +5,7 @@ class SubscriberMailer < ApplicationMailer
   #   en.subscriber_mailer.weekly_summary.subject
   #
   def weekly_summary
+    @jobs = Job.weekly_summary
     mail to: params[:subscriber].email
   end
 end

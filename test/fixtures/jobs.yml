@@ -1,17 +1,26 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  company: MyString
+  title: Developer
+  company: Frontend Masters
   salary: 1
-  region: MyString
-  apply_url: MyString
-  apply_email: MyString
+  region: Remote
+  apply_url: https://frontendmasters.com
+  apply_email:
 
 two:
-  title: MyString
-  company: MyString
+  title: Developer
+  company: GoRails
   salary: 1
-  region: MyString
-  apply_url: MyString
-  apply_email: MyString
+  region: Remote
+  apply_url: https://gorails.com
+  apply_email:
+
+old_job:
+  created_at: <%= 1.month.ago %>
+  title: Developer
+  company: GoRails
+  salary: 1
+  region: Remote
+  apply_url: https://gorails.com
+  apply_email:

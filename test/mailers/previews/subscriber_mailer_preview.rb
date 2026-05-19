@@ -3,8 +3,7 @@ class SubscriberMailerPreview < ActionMailer::Preview
   # Preview this email at http://localhost:3000/rails/mailers/subscriber_mailer/weekly_summary
   def weekly_summary
     SubscriberMailer.with(
-      subscriber: Subscriber.last || Subscriber.new,
-      jobs: Job.all
+      subscriber: Subscriber.where(email: "test@example.com").first_or_create
     ).weekly_summary
   end
 end

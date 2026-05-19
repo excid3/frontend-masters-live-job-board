@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :jobs
   resources :subscribers, only: [ :create ]
+  resource :unsubscribe, only: [ :show, :destroy ]
 
   # Defines the root path route ("/")
   root "jobs#index"

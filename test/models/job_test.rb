@@ -15,7 +15,7 @@ class JobTest < ActiveSupport::TestCase
     assert_includes job.errors[:base], "Please provide an apply URL or email"
   end
 
-  # test "the truth" do
-  #   assert true
-  # end
+  test "weekly summary does not include old jobs" do
+    assert_not_includes Job.weekly_summary, jobs(:old_job)
+  end
 end
