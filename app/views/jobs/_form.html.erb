@@ -32,6 +32,11 @@
   </div>
 
   <div>
+    <%= form.label :description %>
+    <%= form.rich_textarea :description, required: true %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

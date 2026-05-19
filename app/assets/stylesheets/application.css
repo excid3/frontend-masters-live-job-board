@@ -8,3 +8,9 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+@media (prefers-color-scheme: dark) {
+  trix-toolbar .trix-button {
+    filter: invert(1);
+  }
+}

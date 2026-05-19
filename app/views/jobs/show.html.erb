@@ -3,6 +3,9 @@
 <h1><%= @job.title %> at <%= @job.company %></h1>
 <p><%= number_to_currency @job.salary %> - <%= @job.region %></p>
 
+<h5>Job Description</h5>
+<%= @job.description %>
+
 <h5>Apply for this job</h5>
 <%= link_to "Website", URI.parse(@job.apply_url).to_s, role: :button if @job.apply_url? %>
 <%= mail_to @job.apply_email, "Email", role: :button if @job.apply_email? %>

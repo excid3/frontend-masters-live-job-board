@@ -33,6 +33,12 @@
         </ul>
         <ul>
           <li><%= link_to "Post a job", new_job_path %></li>
+          <% if authenticated? %>
+            <li><%= button_to "Logout", session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign up", new_registration_path %></li>
+            <li><%= link_to "Login", new_session_path %></li>
+          <% end %>
         </ul>
       </nav>
     </header>
