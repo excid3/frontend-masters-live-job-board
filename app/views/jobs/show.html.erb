@@ -1,7 +1,7 @@
 <%= link_to "Edit job post", edit_job_path(@job) if authenticated? && @job.owner? %>
 
 <h1><%= @job.title %> at <%= @job.company %></h1>
-<p><%= number_to_currency @job.salary %> - <%= @job.region %></p>
+<p><%= number_to_currency @job.salary, precision: 0 %> - <%= @job.region %></p>
 
 <h5>Job Description</h5>
 <%= @job.description %>
