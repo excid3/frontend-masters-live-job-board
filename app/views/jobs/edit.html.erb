@@ -1,0 +1,8 @@
+<h1>Edit job post</h1>
+
+<%= render "form", job: @job %>
+
+<hr>
+
+<h5>Delete this job</h5>
+<%= button_to "Delete job", @job, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
