@@ -25,7 +25,22 @@
   </head>
 
   <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><strong>JobBoard</strong></li>
+          <li><%= link_to "All Jobs", root_path %></li>
+        </ul>
+        <ul>
+          <li><%= link_to "Post a job", new_job_path %></li>
+        </ul>
+      </nav>
+    </header>
+
     <main class="container">
+      <%= tag.article alert, style: "color:red;" if alert %>
+      <%= tag.article notice, style: "color:green;" if notice %>
+
       <%= yield %>
     </main>
   </body>

@@ -1,0 +1,7 @@
+<% if form.object.errors.any? %>
+  <article style="color:red;">
+    <% form.object.errors.full_messages.each do %>
+      <%= tag.div it %>
+    <% end %>
+  </article>
+<% end %>
