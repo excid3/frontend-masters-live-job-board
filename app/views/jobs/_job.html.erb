@@ -1,0 +1,8 @@
+<div>
+  <h3>
+    <%= link_to job do %>
+      <%= job.title %> at <%= job.company %>
+    <% end %>
+  </h3>
+  <p><%= number_to_currency job.salary %> - <%= job.region %></p>
+</div>
