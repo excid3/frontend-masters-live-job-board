@@ -29,3 +29,6 @@
 
 en:
   hello: "Hello world"
+  subscriber_mailer:
+    weekly_summary:
+      subject: "New jobs this week"
