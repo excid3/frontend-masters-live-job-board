@@ -6,7 +6,7 @@
     <%= link_to job do %>
       <%= job.title %> at <%= job.company %>
     <% end %>
-    <div><%= number_to_currency job.salary %> - <%= job.region %></div>
+    <div><%= number_to_currency job.salary, precision: 0 %> - <%= job.region %></div>
   </li>
 <% end %>
 </ul>

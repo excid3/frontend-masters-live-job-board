@@ -7,5 +7,5 @@
     <% end %>
   </h3>
 
-  <p><%= number_to_currency job.salary %> - <%= job.region %></p>
+  <p><%= number_to_currency job.salary, precision: 0 %> - <%= job.region %></p>
 <% end %>
