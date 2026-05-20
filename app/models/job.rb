@@ -24,7 +24,7 @@ class Job < ApplicationRecord
   # to_param :title_and_company
 
   def to_param
-    [id, title, "at", company].join("-").parameterize
+    [ id, title, "at", company ].join("-").parameterize
   end
 
   def owner?
